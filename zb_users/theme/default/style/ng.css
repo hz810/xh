@@ -80,7 +80,7 @@ button,input,select,textarea{font-size:100%;}
 
 .top_d{ width:691px; height:131px; background:url(images/index_26.png) repeat-x; margin-top:15px; float:right; }
 
-.top_d span{ display:block; float:left; width:670px; height:121px; overflow:hidden; line-height:20px; padding-top:10px;}
+.top_d span{display:block;float:left;width:670px;height:121px;overflow:hidden;line-height: 15px;padding-top: 3px;}
 
 .top_d span font{ font-weight:bold}
 
